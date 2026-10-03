@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CONTACTO</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="imagenes2/image.png" alt="logo clinica visual">
+             </a>
+             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-expanded="false" aria-label="toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+             </button>
+             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ESPECIALIDADES.html">ESPECIALIDADES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="CONTACTO.html">CONTACTO</a>
+                    </li>
+                </ul>
+             </div>
+        </div>
+    </nav>
+    <section>
+        <form class="row g-3">
+            <!--aca va el nombre-->
+            <div class="col-md-6">
+                <label for="NOMBRE" class="form-label">NOMBRE</label>
+                <input type="text" class="form-control" id="NOMBRE">
+            </div>
+            <!--ACA VA EL APELLIDO-->
+            <div class="col-md-6">
+                <label for="APELLIDO" class="form-label">APELLIDO</label>
+                <input type="text" class="form-control" id="APELLIDO">
+            </div>
+            <!--ACA VA EL DEPARTAMENTO-->
+            <div class="col-12">
+                <label for="DEPARTAMENTO" class="form-label">DEPARTAMENTO</label>
+                <input type="text" class="form-control" id="DEPARTAMENTO">
+            </div>
+            <!--acs va las especialidadesdx-->
+            <div class="col-md-6">
+                <label for="ESPECIALIDADES" class="form-label">ESPECIALIDADES</label>
+                <select class="form-select" id="ESPECIALIDADES">
+                    <option selected>SELECCIONE UNA ESPECIALIDAD</option>
+                    <option>CATARATAS</option>
+                    <option>GLAUCOMA</option>
+                    <option>OFTALMOPEDIATRA</option>
+                    <option>CONSULTA GENERAL</option>
+                </select>
+            </div>
+            <!--aca va a ir el horario-->
+            <div class="col-md-6">
+                <label for="HORARIO" class="form-label">HORARIO</label>
+                <select class="form-select" id="HORARIO">
+                    <option selected>SELECCIONE UN HORARIO</option>
+                    <option>MAÑANA</option>
+                    <option>TARDE</option>
+                </select>
+            </div>
+            <!--aca va a ir el boton -->
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">SOLICITAR TURNO</button>
+            </div>
+        </form>
+    </section>
+    <!--aca el footer-->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="imagenes2/image.png" alt="logo clinica visual">
+                </div>
+                <div class="col-md-3">
+                    <h5>HORARIO</h5>
+
+                    <p>Lunes a viernes</p>
+                    <p>8:00 a 19:00</p>
+
+                    <br>
+                    <p>Sabado</p>
+                    <p>9:00 a 13:00</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>UBICACION</h5>
+
+                    <p>insertar la foto del minimapa</p>
+                    <p>la ciduad y los datos</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>REDES</h5>
+
+                    <p>facebook</p>
+                    <p>instagram</p>
+                    <p>whatsapp</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+        
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
