@@ -1,190 +1,452 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>clinica visual</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clinica Visual</title>
+  <link rel="icon" type="image/svg+xml" href="imagenes/p3_simbolo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+  <link href="styles.css"  rel="stylesheet">
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
-                <img src="imagenes2/image.png" alt="logo clinica visual">
-             </a>
-             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-expanded="false" aria-label="toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-             </button>
-             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="ESPECIALIDADES.html">ESPECIALIDADES</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="CONTACTO.html">CONTACTO</a>
-                    </li>
-                </ul>
-             </div>
-        </div>
-    </nav>
-    <div id="carouselExampleFade" class="carousel slide carousel-fade">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="imagenes2/imagen 1,1.png" class=" w-100" alt="....">
-                <div class="carousel-caption">
-                    <h1>Clinica visual</h1>
-                    <p>cuidamos tu vison con tecnologia y profesionales especializados</p>
-                    <button>SOLICITAR TURNO</button>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="imagenes2/imagen 1,1.png" class="d-block w-100" alt="....">
-                <div class="carousel-caption">
-                    <h1>Clinica visual</h1>
-                    <p>cuidamos tu vison con tecnologia y profesionalismo especializados</p>
-                    <button>SOLICITAR TURNO</button>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="imagenes2/imagen 1,1.png" class="d-block w-100" alt="....">
-                <div class="carousel-caption">
-                    <h1>Clinica visual</h1>
-                    <p>cuidimaos tu vison con tecnologia y prfesionalismo</p>
-                    <button>SOLICITAR TURNO</button>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev"> 
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">anterior</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-             <span class="visually-hidden">Siguiente</span>
-        </button>
+
+
+<body class="text-center">
+
+
+
+
+
+
+
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a href="" class="navbar-brand">
+        <img src="imagenes2/image.26.png" width="350" height="91" alt="logo clinica visual">
+      </a>
+
+
+
+
+
+
+
+
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#Menuprincipal"
+              aria-controls="Menuprincipal" aria-expanded="false"
+              aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+
+
+
+
+
+
+      <div class="collapse navbar-collapse" id="Menuprincipal">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a href="index.html" class="nav-link active">Inicio</a></li>
+          <li class="nav-item"><a href="ESPECIALIDADES.html" class="nav-link">Especialidades</a></li>
+          <li class="nav-item"><a href="NUESTRO_EQUIPO.html" class="nav-link">Nuestro Equipo</a></li>
+          <li class="nav-item"><a href="CONTACTO.html" class="nav-link">Contacto</a></li>
+        </ul>
+      </div>
     </div>
-    <section>
-        <h2>ESPECIALIDADES</h2>
-        <div id="carouselespecialidades" class="carousel slide">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="card" style="width: 18rem;">
-                        <img src="imagenes2/imagen 1,1.png" class="card-img-top" alt="CATARATAS">
-                        <div class="card-body">
-                            <h5 class="card-tittle">CATARTAS</h5>
-                            <p class="card-text">las cataratas afectan la vison a nivel global</p>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <img src="imagenes2/imagen 1,1.png" class="card-img-top" alt="GLAUCOMA">
-                        <div class="card-body">
-                            <h5 class="card-tittle">GLAUCOMA</h5>
-                            <p class="card-text">enfermaedad q puede afectar progresivamentela vision</p>
-                        </div>
-                 </div>
-                 <div class="card" style="width: 18rem;">
-                    <img src="imagenes2/imagen 1,1.png" class="card-img-top" alt="RETINA">
-                    <div class="card-body">
-                        <h5 class="card-tittle">RETINA</h5>
-                        <p class="card-text">atebcion y tratamiendo de enfermedades de la retina</p>
-                  </div>
-            </div>
-        </div>
-        <!--aca iria el sergundo pack de tarjetas de especialidades -->
-        <button class="carousel-control-prev" type="button" data-bs-target="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">anterior</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="carouselespecialidades" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">siguiente</span>
-        </button>
-    </section>
-    <section>
-        <h2>NUESTROS MEDICOS</h2>
-        <!--acaa iria las tarjetas de los medicos-->
-        <div class="card mb-3" style="max-width: 540px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="imagenes2/Chairman's Helicopter Medical Staff.png" class="img-fluid rounded-start" alt="...">
+  </nav>
+
+
+
+
+
+
+
+
+  <!-- CARRUSEL -->
+  <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="imagenes2/Gemini_Generated_Image_q5j95fq5j95fq5j9.png" class="d-block w-100" alt="Clínica Visual">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Nuevas miradas hoy</h5>
+        <p>Una visión clara empieza con una consulta oftalmológica</p>
+        <a href="CONTACTO.html" class="btn btn-primary btn-lg">Solicitar Turno</a>
+      </div>
     </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">ESPECIALISTA DE GLAUCOMA</h5>
-        <p class="card-text">DR eugenia peralta especialista en tratamiento de glaucoma y en medicina general</p>
-        <p class="card-text"><small class="text-body-secondary">trayectoria de 4 años</small></p>
-        <button>SOLICITAR TURNO</button>
+    <div class="carousel-item">
+      <img src="imagenes2/Gemini_Generated_Image_yjb6mkyjb6mkyjb6.png" class="d-block w-100" alt="Clínica Visual">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Enfoque y claridad</h5>
+        <p>No dejes que el tiempo nuble tu visión, revisa tu salud ocular con nosotros</p>
+        <a href="CONTACTO.html" class="btn btn-primary btn-lg">Solicitar Turno</a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="imagenes2/Gemini_Generated_Image_hlz7w5hlz7w5hlz7.png" class="d-block w-100" alt="Clínica Visual">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Cuidado visual continuo</h5>
+        <p>La mirada es el espejo del alma</p>
+        <a href="CONTACTO.html" class="btn btn-primary btn-lg">Solicitar Turno</a>
       </div>
     </div>
   </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+  <span class="carousel-control-prev-icon bg-dark rounded-circle p-4" aria-hidden="true"></span>
+  <span class="visually-hidden">Anterior</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+  <span class="carousel-control-next-icon bg-dark rounded-circle p-4" aria-hidden="true"></span>
+  <span class="visually-hidden">Siguiente</span>
+</button>
 </div>
-<div class="card mb-3" style="max-width: 540px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="imagenes2/Chairman's Helicopter Medical Staff.png" class="img-fluid rounded-start" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">ESPECIALISTA DE OFTALMOPEDIATRA</h5>
-        <p class="card-text">DR juan ramirez especialista en tratamiento de oftalmopediatra y en medicina general </p>
-        <p class="card-text"><small class="text-body-secondary">trayectoria de 4 años</small></p>
-        <button>SOLICITAR TURNO</button>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="card mb-3" style="max-width: 540px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="imagenes2/Chairman's Helicopter Medical Staff.png" class="img-fluid rounded-start" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">ESPECIALISTA DE CATARATAS</h5>
-        <p class="card-text">DR sofia marquez especialista en tratamiento de cataratas y en medicina general </p>
-        <p class="card-text"><small class="text-body-secondary">trayectoria de 4 años</small></p>
-        <button>SOLICITAR TURNO</button>
-      </div>
-    </div>
-  </div>
-</div>
+<br>
+  <br>
 
-    </section>
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <img src="imagenes2/image.png" alt="logo clinica visual">
-                </div>
-                <div class="col-md-3">
-                    <h5>HORARIO</h5>
 
-                    <p>Lunes a viernes</p>
-                    <p>8:00 a 19:00</p>
 
-                    <br>
-                    <p>Sabado</p>
-                    <p>9:00 a 13:00</p>
-                </div>
-                <div class="col-md-3">
-                    <h5>UBICACION</h5>
 
-                    <p>insertar la foto del minimapa</p>
-                    <p>la ciduad y los datos</p>
-                </div>
-                <div class="col-md-3">
-                    <h5>REDES</h5>
 
-                    <p>facebook</p>
-                    <p>instagram</p>
-                    <p>whatsapp</p>
-                </div>
+
+
+
+<!-- CARRUSEL DE ESPECIALIDADES -->
+ <h2 class="especialistas-titulo">
+      <span>★</span>Especialidades<span>★</span>
+    </h2>
+
+
+<div id="carruselEspecialidades" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="container py-4">
+        <div class="row g-4">
+
+
+
+
+          <div class="col-12 col-md-4">
+            <div class="card h-100 shadow rounded overflow-hidden">
+              <img src="imagenes2/image.24.png" class="card-img-top" alt="Glaucoma">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-center">Glaucoma</h5>
+                <p class="card-text text-center">
+                  Enfermedad que daña progresivamente el nervio óptico.
+                  Los controles permiten detectarla y tratarla a tiempo.
+                </p>
+                <a href="contacto.html" class="btn btn-primary mt-auto">Agendar turno</a>
+              </div>
             </div>
+          </div>
+
+
+
+
+          <div class="col-12 col-md-4">
+            <div class="card h-100 shadow rounded overflow-hidden">
+              <img src="imagenes2/image.23.png" class="card-img-top" alt="Oftalmopediatría">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-center">Oftalmopediatría</h5>
+                <p class="card-text text-center">
+                  Atención visual para bebés, niños y adolescentes.
+                  Detectamos problemas como estrabismo y ambliopía.
+                </p>
+                <a href="CONTACTO.html" class="btn btn-primary mt-auto">Agendar turno</a>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <div class="col-12 col-md-4">
+            <div class="card h-100 shadow-sm rounded overflow-hidden">
+              <img src="imagenes2/image.39.png" class="card-img-top" alt="Cataratas">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-center">Cataratas</h5>
+                <p class="card-text text-center">
+                  Pérdida de transparencia del cristalino que puede
+                  causar visión borrosa y dificultad para ver con claridad.
+                </p>
+                <a href="CONTACTO.html" class="btn btn-primary mt-auto">Agendar turno</a>
+              </div>
+            </div>
+          </div>
+
+
+
+
         </div>
-    </footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+      </div>
+    </div>
+
+
+
+
+    <div class="carousel-item">
+      <div class="container py-4">
+        <div class="row g-4">
+
+
+
+
+          <div class="col-12 col-md-4">
+            <div class="card h-100 shadow rounded overflow-hidden">
+              <img src="imagenes2/image.11.png" class="card-img-top" alt="Ojo seco">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-center">Ojo seco</h5>
+                <p class="card-text text-center">
+                  Alteración de la lubricación ocular que puede causar
+                  ardor, irritación, enrojecimiento y sensación de arenilla.
+                </p>
+                <a href="CONTACTO.html" class="btn btn-primary mt-auto">Agendar turno</a>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <div class="col-12 col-md-4">
+            <div class="card h-100 shadow rounded overflow-hidden">
+              <img src="imagenes2/image.12.png" class="card-img-top" alt="Enfermedades de la retina">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-center">Enfermedades de la retina</h5>
+                <p class="card-text text-center">
+                  Evaluación de alteraciones de la retina que pueden
+                  afectar la visión central o periférica.
+                </p>
+                <a href="CONTACTO.html" class="btn btn-primary mt-auto">Agendar turno</a>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <div class="col-12 col-md-4">
+            <div class="card h-100 shadow rounded overflow-hidden">
+              <img src="imagenes2/image.33.png" class="card-img-top" alt="Miopía y astigmatismo">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-center">Miopía y astigmatismo</h5>
+                <p class="card-text text-center">
+                  Problemas de refracción que dificultan enfocar
+                  correctamente los objetos cercanos o lejanos.
+                </p>
+                <a href="CONTACTO.html" class="btn btn-primary mt-auto">Agendar turno</a>
+              </div>
+            </div>
+          </div>
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+
+
+
+  <button class="carousel-control-prev" type="button"
+    data-bs-target="#carruselEspecialidades" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon bg-dark rounded-circle p-3"
+      aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+
+
+
+
+  <button class="carousel-control-next" type="button"
+    data-bs-target="#carruselEspecialidades" data-bs-slide="next">
+    <span class="carousel-control-next-icon bg-dark rounded-circle p-3"
+      aria-hidden="true"></span>
+    <span class="visually-hidden">Siguiente</span>
+  </button>
+
+
+
+
+</div>
+
+
+<br>
+  <!-- ESPECIALISTAS -->
+  <section class="especialistas">
+
+
+
+
+
+
+
+
+    <h2 class="especialistas-titulo">
+      <span>★</span>Nuestros Especialistas<span>★</span>
+    </h2>
+  <br>
+
+
+
+
+
+
+    <div class="especialistas-grid">
+
+
+
+
+
+
+
+
+      <!-- Tarjeta 1 -->
+      <article class="especialista-card">
+        <img src="imagenes2/confident-medical-professional-stockcake.png" class="especialista-foto" alt="Dra. Vanesa Duran">
+        <h3 class="especialista-nombre">Dra. Vanesa Duran</h3>
+        <p class="especialista-especialidad">Especialista en oftalmología general y oftalmopediatría</p>
+        <div class="etiquetas">
+          <span class="etiqueta"><i class="bi bi-clock"></i> 3 años de experiencia</span>
+          <span class="etiqueta"><i class="bi bi-person"></i> 25 años</span>
+        </div>
+      </article>
+
+
+
+
+
+
+
+
+      <!-- Tarjeta 2 -->
+      <article class="especialista-card">
+        <img src="imagenes2/istockphoto-2158610739-612x612.png" class="especialista-foto" alt="Dr. Elías Olmedo">
+        <h3 class="especialista-nombre">Dr. Elías Olmedo</h3>
+        <p class="especialista-especialidad">Especialista en Oftalmología general y Cirugía de segmento anterior</p>
+        <p class="especialista-detalle">Cirugía láser general · Tratamiento de glaucoma</p>
+        <div class="etiquetas">
+          <span class="etiqueta"><i class="bi bi-clock"></i> 8 años de experiencia</span>
+          <span class="etiqueta"><i class="bi bi-person"></i> 35 años</span>
+        </div>
+      </article>
+      <!-- Tarjeta 3 -->
+      <article class="especialista-card">
+        <img src="imagenes2/image.35.png" class="especialista-foto" alt="Dr jose bianco">
+        <h3 class="especialista-nombre">Dr. Jose Bianco</h3>
+        <p class="especialista-especialidad">Especialista en cataratas y en medicina general</p>
+        <p class="especialista-detalle">Cataratas</p>
+        <div class="etiquetas">
+            <span class="etiqueta"><i class="bi bi-clock"></i>10 años de experiencia</span>
+            <span class="etiqueta"><i class="bi bi-person"></i> 28 años</span>
+        </div>
+      </article>
+
+
+
+
+
+
+
+
+    </div>  
+  </section>
+
+
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row align-items-center py-4">
+
+
+
+
+
+
+
+
+        <!-- Logo -->
+        <div class="col-12 col-md-3 mb-4 mb-md-0">
+          <img src="imagenes/image 17.png" class="footer-logo" alt="logo Clinica Visual">
+        </div>
+
+
+
+
+
+
+
+
+        <!-- Horarios -->
+        <div class="col-12 col-md-3 mb-4 mb-md-0 footer-horarios">
+          <h5 class="footer-titulo">Horarios</h5>
+          <p class="footer-dia">Lunes a Viernes</p>
+          <p class="footer-hora">De 08:00 a 19:00</p>
+          <p class="footer-dia">Sábado</p>
+          <p class="footer-hora">De 09:00 a 13:00</p>
+        </div>
+
+
+
+
+
+
+        <!-- Ubicación -->
+<div class="col-12 col-md-3 mb-4 mb-md-0">
+  <h5 class="footer-titulo">Ubicación</h5>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3400.4468370658947!2d-68.5321957!3d-31.5393495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x968140258ace1925%3A0x8ff9e07103de958c!2sSta%20Fe%20Oeste%20449%2C%20J5400%20San%20Juan!5e0!3m2!1ses-419!2sar!4v1792428762064!5m2!1ses-419!2sar" width="200" height="150" style="border:0; border-radius:12px;" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  <p class="footer-direccion">Sta Fe Oeste 449</p>
+</div>
+
+
+
+
+ 
+
+
+        <!-- Redes sociales -->
+        <div class="col-12 col-md-3">
+          <ul class="footer-redes list-unstyled">
+            <li><i class="bi bi-facebook"></i> <span>ClinicaVisual.sj</span></li>
+            <li><i class="bi bi-instagram"></i> <span>ClinicaVisual.sj</span></li>
+            <li><i class="bi bi-whatsapp"></i> <span>+54 9 2641234567</span></li>
+          </ul>
+        </div>
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
