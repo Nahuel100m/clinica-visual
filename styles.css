@@ -1,16 +1,12 @@
 :root {
   --fuente-principal: 'Manrope', sans-serif;
-
-
   --fuente-headline: var(--fuente-principal);
 
-
-  --headline-size: 40px;   --headline-weight: 800;  
-  --title-size: 30px;      --title-weight: 700;    
+  --headline-size: 40px;   --headline-weight: 800;
+  --title-size: 30px;      --title-weight: 700;
   --subheader-size: 20px;  --subheader-weight: 400;
-  --body-size: 14px;       --body-weight: 400;      
+  --body-size: 14px;       --body-weight: 400;
 }
-
 
 body {
   margin: 0;
@@ -23,7 +19,7 @@ body {
   flex-direction: column;
 }
 
-
+/* ===== NAVBAR ===== */
 .navbar {
   background: #102A43;
 }
@@ -45,8 +41,7 @@ body {
   color: #C8A96B;
 }
 
-
-
+/* ===== CARRUSEL PRINCIPAL (BANNER) ===== */
 #carouselExampleCaptions .carousel-item::after {
   content: "";
   position: absolute;
@@ -62,12 +57,10 @@ body {
 #carouselExampleCaptions .carousel-caption {
   z-index: 2;
 }
-
 #carouselExampleCaptions .carousel-caption h5 {
   font-size: var(--title-size);
   font-weight: var(--title-weight);
 }
-
 #carouselExampleCaptions .carousel-caption p {
   font-size: var(--subheader-size);
   font-weight: var(--subheader-weight);
@@ -76,46 +69,111 @@ body {
   margin-bottom: 1.2rem;
 }
 
+/* ===== FONDO ROMBO (Especialidades + Especialistas) ===== */
+.fondo-rombo {
+  position: relative;
+  overflow: hidden;
+  padding: 50px 0 70px;
+  margin-bottom: 40px;
+}
+.fondo-rombo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #C8A96B66;
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  z-index: 0;
+}
+.fondo-rombo > * {
+  position: relative;
+  z-index: 1;
+}
+.especialidades-seccion {
+  margin-bottom: 70px;
+}
+.fondo-rombo .especialistas {
+  margin-bottom: 0;
+}
 
+/* Título simple, sin píldora */
+.titulo-seccion {
+  margin: 0 0 40px;
+  text-align: center;
+  font-size: var(--title-size);
+  font-weight: var(--title-weight);
+  color: #12294a;
+}
+
+/* ===== CARRUSEL DE ESPECIALIDADES ===== */
 #carruselEspecialidades {
   padding: 0 60px;
 }
 #carruselEspecialidades .card {
   border: none;
-  border-radius: 16px;
+  border-radius: 2px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25) !important;
+  background: #fff;
   transition: transform 0.25s, box-shadow 0.25s;
 }
 #carruselEspecialidades .card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 28px rgba(16, 42, 67, 0.2) !important;
 }
+/* Ancho del conjunto y separación entre las 2 tarjetas */
+#carruselEspecialidades .container {
+  max-width: 1258px;
+}
+#carruselEspecialidades .row {
+  --bs-gutter-x: 110px;
+}
+#carruselEspecialidades .card {
+  min-height: 534px;
+}
 #carruselEspecialidades .card-img-top {
-  height: 220px;
+  height: 340px;
   object-fit: cover;
   object-position: center 30%;
+  border-radius: 0;
 }
-/* SUBHEADER */
+#carruselEspecialidades .card-body {
+  padding: 14px 60px 28px;
+}
 #carruselEspecialidades .card-title {
-  font-size: var(--subheader-size);
-  font-weight: var(--subheader-weight);
+  font-size: 28px;
+  font-weight: 400;
+  margin: 4px 0 6px;
 }
-/* BODY */
 #carruselEspecialidades .card-text {
   font-size: var(--body-size);
   font-weight: var(--body-weight);
+  font-size: 16px;
+  line-height: 1.4;
+  color: #222;
+  margin-bottom: 18px;
 }
-#carruselEspecialidades .carousel-control-prev {
-  left: 0;
-}
-#carruselEspecialidades .carousel-control-next {
-  right: 0;
-}
-#carruselEspecialidades .carousel-control-prev,
-#carruselEspecialidades .carousel-control-next {
-  width: 50px;
-  opacity: 1;
+#carruselEspecialidades .btn-primary {
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 16px;
 }
 
+/* Flechas: círculos negros chicos */
+#carruselEspecialidades .carousel-control-prev,
+#carruselEspecialidades .carousel-control-next {
+  width: 40px;
+  opacity: 1;
+}
+#carruselEspecialidades .carousel-control-prev { left: 20px; }
+#carruselEspecialidades .carousel-control-next { right: 20px; }
+
+#carruselEspecialidades .carousel-control-prev-icon,
+#carruselEspecialidades .carousel-control-next-icon {
+  width: 24px;
+  height: 24px;
+  background-size: 50%;
+}
+
+/* ===== ESPECIALISTAS ===== */
 .especialistas {
   margin-bottom: 40px;
 }
@@ -138,85 +196,104 @@ body {
 }
 .especialistas-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-  max-width: 1100px;
+  grid-template-columns: repeat(auto-fit, 472px);
+  justify-content: center;
+  gap: 30px clamp(20px, 12vw, 134px);
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
 .especialista-card {
-  background: #e3e3e3;
-  border-radius: 12px;
-  padding: 15px;
+  background: #fff;
+  border-radius: 4px;
+  padding: 16px 16px 18px;
   box-sizing: border-box;
-  max-width: 900px;
   width: 100%;
+  max-width: 472px;
+  min-height: 597px;
+  display: flex;
+  flex-direction: column;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
 }
 .especialista-foto {
+  display: block;
   width: 100%;
-  height: 280px;
+  height: 400px;
   object-fit: cover;
   object-position: top;
-  border-radius: 8px;
+  border-radius: 16px;
 }
-
 .especialista-nombre {
-  margin: 32px 0 4px;
+  margin: 18px 0 4px;
   text-align: center;
-  font-size: var(--subheader-size);
-  font-weight: var(--subheader-weight);
-  color: #102A43;
+  font-size: 20px;
+  font-weight: 400;
+  color: #12294a;
 }
-
 .especialista-especialidad {
   margin: 0;
+  padding: 0 10px;
   text-align: center;
-  font-size: var(--body-size);
+  font-size: 15px;
   font-weight: var(--body-weight);
-  color: #333333;
+  line-height: 1.25;
+  color: #555;
 }
 .especialista-detalle {
-  margin: 0;
+  margin: 2px 0 0;
   text-align: center;
-  font-size: var(--body-size);
+  font-size: 15px;
   font-weight: var(--body-weight);
-  color: #5b6b7a;
+  color: #5B6B7A;
 }
 .etiquetas {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
-  margin-top: 16px;
+  gap: 6px;
+  margin-top: auto;
+  padding-top: 16px;
 }
 .etiqueta {
-  background: #102A43;
-  color: #f6f6f7;
+  background: #12294a;
+  color: #fff;
   border-radius: 999px;
-  padding: 4px 12px;
-  font-size: var(--body-size);
-  font-weight: var(--body-weight);
+  padding: 3px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.etiqueta i {
+  margin-right: 3px;
 }
 
+/* ===== BOTONES: fondo dorado, letras azules; al pasar el mouse, letras blancas ===== */
 .btn-turno {
   margin-top: 1rem;
   padding: 0.7rem 1.8rem;
-  background-color: #C8A96B;
-  color: #102A43;
   border-radius: 999px;
   text-decoration: none;
 }
-.btn-turno:hover {
-  background: #b38f4b;
-}
-.btn-primary {
+.btn-turno,
+.btn-primary,
+.btn-contacto {
   background-color: #C8A96B !important;
   border-color: #C8A96B !important;
-  color: #102A43;
+  color: #102A43 !important;
+  cursor: pointer;
+  transition: background-color 0.25s, color 0.25s;
+}
+.btn-turno:hover,
+.btn-primary:hover,
+.btn-contacto:hover {
+  background-color: #b38f4b !important;
+  border-color: #b38f4b !important;
+  color: #fff !important;
 }
 
+/* ===== FOOTER ===== */
 .footer {
   margin-top: auto;
   background: #102A43;
@@ -236,8 +313,6 @@ body {
   gap: 30px;
   padding: 0;
 }
-
-
 .footer h5 {
   color: #fff;
   font-size: var(--subheader-size);
@@ -264,7 +339,310 @@ body {
   opacity: 0.9;
 }
 
+/* ===== FOOTER NUEVO (fila horizontal) ===== */
+.footer-contenido {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  box-sizing: border-box;
+  height: 252px;              /* alto total del footer */
+  padding: 0 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.footer-marca img {
+  width: 175px;
+  height: 141px;
+  object-fit: contain;
+  display: block;
+}
+.footer .footer-bloque {
+  text-align: left;
+  border-left: 2px solid #8f7d52;
+  padding: 0 0 0 18px;
+  height: 93px;               /* misma altura de línea en los 3 bloques */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.footer .footer-bloque h5 {
+  margin: 0 0 6px;
+  font-size: 24px;
+  font-weight: 400;
+  color: #fff;
+}
+.footer .footer-bloque p {
+  margin: 0 0 4px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #d8dee6;
+}
+.footer .footer-bloque p.footer-direccion {
+  font-size: 14px;
+}
+.footer .footer-bloque p:last-child {
+  margin-bottom: 0;
+}
+.footer .footer-bloque strong {
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+}
+.footer .footer-bloque i {
+  color: #fff;
+  margin-right: 4px;
+}
+.footer-mapa-embed {
+  width: 260px;
+  height: 184px;
+  border: 0;
+  border-radius: 16px;
+  flex-shrink: 0;
+}
 
+@media (max-width: 991px) {
+  .footer-contenido {
+    flex-direction: column;
+    gap: 18px;
+    height: auto;
+    padding: 30px 15px;
+  }
+  .footer .footer-bloque {
+    border-left: 0;
+    padding: 0;
+    height: auto;
+    text-align: center;
+  }
+}
+
+/* ===== FOOTER: versión celular (hasta 767px) ===== */
+@media (max-width: 767px) {
+  .footer-contenido {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    column-gap: 18px;
+    row-gap: 22px;
+    height: auto;
+    padding: 28px 20px 26px;
+  }
+  .footer-marca {
+    justify-self: center;
+  }
+  .footer-marca img {
+    width: 100px;
+    height: 80px;
+  }
+
+  /* Horarios: al lado del logo, con línea dorada */
+  .footer .footer-horarios {
+    border-left: 2px solid #8f7d52;
+    padding: 0 0 0 16px;
+    height: auto;
+    text-align: left;
+  }
+  .footer .footer-horarios h5 {
+    margin: 0 0 2px;
+    font-size: 14px;
+    color: #d8dee6;
+  }
+  .footer .footer-horarios p {
+    margin: 0 0 8px;
+    font-size: 14px;
+  }
+  .footer .footer-horarios p:last-child {
+    margin-bottom: 0;
+  }
+  .footer .footer-horarios strong {
+    display: block;
+    font-size: 15px;
+  }
+  .footer .footer-horarios .sep {
+    display: none;
+  }
+
+  /* Redes: una sola fila */
+  .footer .footer-social {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    border-left: 0;
+    padding: 0;
+    height: auto;
+  }
+  .footer .footer-social p {
+    margin: 0;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  /* Ubicación: franja dorada de lado a lado */
+  .footer .footer-ubicacion {
+    grid-column: 1 / -1;
+    margin: 0 -20px;
+    padding: 12px 20px;
+    background: #C8A96B;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    gap: 10px;
+    border-left: 0;
+    height: auto;
+    text-align: center;
+  }
+  .footer .footer-ubicacion h5 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #12294a;
+  }
+  .footer .footer-ubicacion p.footer-direccion {
+    margin: 0;
+    font-size: 13px;
+    color: #12294a;
+  }
+
+  /* Mapa: ancho completo */
+  .footer-mapa-embed {
+    grid-column: 1 / -1;
+    width: 100%;
+    height: 150px;
+    border-radius: 22px;
+  }
+}
+
+/* ===== PÁGINA ESPECIALIDADES: lista de tarjetas horizontales ===== */
+.fondo-rombo--pagina {
+  padding-top: 60px;
+  margin-bottom: 0;
+}
+.contenedor-especialidades {
+  max-width: 1000px;
+}
+.card-h {
+  display: flex;
+  align-items: stretch;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  margin-bottom: 24px;
+  text-align: left;
+}
+.card-h:last-child {
+  margin-bottom: 0;
+}
+/* Cataratas, Ojos secos y Astigmatismo: imagen a la derecha */
+.card-h--invertida {
+  flex-direction: row-reverse;
+}
+.card-h__img {
+  flex: 0 0 24%;
+  max-width: 320px;
+}
+.card-h__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card-h__body {
+  flex: 1;
+  padding: 18px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.card-h__body .etiqueta {
+  font-size: 12px;
+  padding: 3px 16px;
+  margin-bottom: 6px;
+}
+.card-h__title {
+  margin: 0 0 6px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #12294a;
+}
+.card-h__text {
+  margin: 0 0 12px;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #555;
+}
+.card-h__text strong {
+  font-weight: 700;
+  color: #222;
+}
+.card-h .btn-turno {
+  margin-top: 0;
+  padding: 6px 24px;
+  border-radius: 12px;
+  font-size: 13px;
+}
+
+@media (max-width: 575px) {
+  .card-h,
+  .card-h--invertida {
+    flex-direction: column;
+  }
+  .card-h__img {
+    flex: none;
+    max-width: none;
+    height: 180px;
+  }
+  .card-h__body {
+    padding: 18px;
+  }
+}
+
+/* ===== PÁGINA NUESTRO EQUIPO ===== */
+.contenedor-equipo {
+  margin-bottom: 60px;
+}
+.contenedor-equipo:last-child {
+  margin-bottom: 0;
+}
+.card-equipo {
+  border: none;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+.card-equipo .card-img-top {
+  height: 280px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 0;
+}
+.card-equipo .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 20px 22px;
+}
+.card-equipo .card-title {
+  margin: 0 0 6px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #12294a;
+}
+.card-equipo .card-text {
+  margin-bottom: 14px;
+  font-size: 14px;
+  line-height: 1.35;
+  color: #555;
+}
+.card-equipo .etiqueta {
+  margin-top: auto;
+}
+
+/* ===== CONTACTO ===== */
 .contacto-seccion {
   padding: 60px 0;
   background: #e8ecef;
@@ -278,14 +656,12 @@ body {
 .contacto-formulario {
   padding: 40px;
 }
-
 .contacto-formulario h2 {
   color: #12294a;
   font-size: var(--title-size);
   font-weight: var(--title-weight);
   margin-bottom: 12px;
 }
-
 .contacto-formulario p {
   color: #5B6B7A;
   font-size: var(--body-size);
@@ -307,14 +683,8 @@ body {
   width: 100%;
   padding: 13px;
   margin-top: 12px;
-  background: #C8A96B;
-  border: none;
-  color: #102A43;
   font-weight: 700;
   border-radius: 8px;
-}
-.btn-contacto:hover {
-  background: #b38f4b;
 }
 .contacto-imagen {
   padding: 0;
@@ -328,7 +698,69 @@ body {
   display: block;
 }
 
+/* ===== CONTACTO: ajustes de diseño ===== */
+.contacto-seccion.fondo-rombo {
+  padding: 80px 0;
+  margin-bottom: 0;
+  background: transparent;
+}
+.contacto-contenedor {
+  border-radius: 24px;
+}
+.contacto-formulario h2 {
+  color: #111;
+  font-weight: 800;
+}
+.contacto-formulario .form-label {
+  color: #111;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.contacto-formulario .form-control,
+.contacto-formulario .form-select {
+  padding: 9px 14px;
+  border-radius: 10px;
+  border: 1px solid #555;
+  font-size: 14px;
+}
+.btn-contacto {
+  font-weight: 700;
+  border-radius: 10px;
+  margin-top: 8px;
+}
+.contacto-redes {
+  margin-top: 60px;
+}
+.contacto-redes h3 {
+  margin: 0 0 8px;
+  font-size: var(--title-size);
+  font-weight: 800;
+  color: #111;
+}
+.contacto-formulario .contacto-redes p {
+  margin-bottom: 16px;
+  font-size: var(--body-size);
+  color: #333;
+}
+.contacto-redes li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10px;
+  font-size: var(--body-size);
+  color: #333;
+}
+.contacto-redes li:last-child {
+  font-size: var(--body-size);
+}
+.contacto-redes li i {
+  color: #C8A96B;
+  font-size: 20px;
+}
 
+/* ===== RESPONSIVE ===== */
 @media (max-width: 991px) {
   .contacto-formulario {
     padding: 25px;
@@ -341,7 +773,6 @@ body {
     max-height: 350px;
   }
 }
-
 
 @media (max-width: 768px) {
   :root {
@@ -356,131 +787,303 @@ body {
     height: 300px;
   }
 }
-.card-h {
-  display: flex;
-  flex-direction: row;
-  max-width: 100%;
-  margin: 30px 0;
-  background: #fff;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 8px 25px rgba(16, 42, 67, 0.12);
-  
-}
 
+@media (max-width: 767px) {
+  .fondo-rombo {
+    padding: 36px 0 48px;
+  }
+  .especialidades-seccion {
+    margin-bottom: 48px;
+  }
+  .titulo-seccion {
+    margin-bottom: 24px;
+  }
 
-@media (max-width: 576px) {
-  .card-h--invertida {
-    flex-direction: column;
+  #carruselEspecialidades {
+    padding: 0 40px;
+  }
+  #carruselEspecialidades .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #carruselEspecialidades .row {
+    --bs-gutter-x: 0;
+  }
+  #carruselEspecialidades .card {
+    min-height: 440px;
+  }
+  #carruselEspecialidades .card-img-top {
+    height: 200px;
+  }
+  #carruselEspecialidades .card-body {
+    padding: 14px 18px 20px;
+  }
+  #carruselEspecialidades .card-title {
+    font-size: 22px;
+  }
+  #carruselEspecialidades .card-text {
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+  #carruselEspecialidades .btn-primary {
+    font-size: 15px;
+    padding: 8px 12px;
+  }
+
+  #carruselEspecialidades .carousel-control-prev,
+  #carruselEspecialidades .carousel-control-next {
+    width: 32px;
+  }
+  #carruselEspecialidades .carousel-control-prev { left: 4px; }
+  #carruselEspecialidades .carousel-control-next { right: 4px; }
+  #carruselEspecialidades .carousel-control-prev-icon,
+  #carruselEspecialidades .carousel-control-next-icon {
+    width: 22px;
+    height: 22px;
   }
 }
-.card-h--invertida {
-  flex-direction: row-reverse;
-}
-.card-h__img {
-  flex: 0 0 300px;
-}
-.card-h__img img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.card-h__body {
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-}
-.card-h__title {
-  margin: 0;
-  color: #12294a;
-  font-size: var(--subheader-size);
-  font-weight: var(--title-weight);
-}
-.card-h__text {
-  margin: 0;
-  color: #5B6B7A;
-  font-size: var(--body-size);
-  font-weight: var(--body-weight);
-}
-.card-h__body .btn-turno {
-  margin-top: auto;
-  border: none;
-  cursor: pointer;
+
+@media (max-width: 767px) {
+  html, body {
+    overflow-x: hidden;
+  }
+
+  /* Navbar */
+  .navbar-brand img {
+    height: 52px;
+  }
+  .navbar-nav .nav-link {
+    padding: 10px 0;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  /* Secciones con fondo rombo */
+  .fondo-rombo--pagina {
+    padding-top: 36px;
+    padding-bottom: 48px;
+  }
+
+  /* Inicio: especialistas */
+  .especialistas-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    padding: 0 20px;
+  }
+  .especialista-card {
+    min-height: 0;
+    max-width: none;
+  }
+  .especialista-foto {
+    height: 320px;
+  }
+  .especialista-nombre {
+    font-size: 19px;
+  }
+  .especialista-especialidad,
+  .especialista-detalle {
+    font-size: 14px;
+  }
+
+  /* Nuestro Equipo */
+  .contenedor-equipo {
+    margin-bottom: 36px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .card-equipo .card-img-top {
+    height: 300px;
+  }
+
+  /* Especialidades (lista) */
+  .contenedor-especialidades {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .card-h {
+    margin-bottom: 18px;
+  }
+
+  /* Contacto */
+  .contacto-seccion.fondo-rombo {
+    padding: 36px 0;
+  }
+  .contacto-seccion .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .contacto-formulario {
+    padding: 22px 18px;
+  }
+  .contacto-formulario h2 {
+    font-size: 26px;
+  }
+  .contacto-redes h3 {
+    font-size: 28px;
+  }
+  .contacto-formulario .contacto-redes p {
+    font-size: 15px;
+  }
+  .contacto-redes li {
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 16px;
+  }
+  .contacto-redes li:last-child {
+    font-size: 14px;
+  }
+  .contacto-redes li i {
+    font-size: 18px;
+  }
+  .contacto-imagen {
+    min-height: 240px;
+  }
+  .contacto-imagen img {
+    min-height: 240px;
+    max-height: 300px;
+  }
+
+  /* Footer: que las redes no se salgan en pantallas angostas */
+  .footer .footer-social {
+    flex-wrap: wrap;
+  }
 }
 
-@media (max-width: 576px) {
-  .card-h {
+img {
+  max-width: 100%;
+}
+
+@media (max-width: 767px) {
+  .contacto-formulario .form-control,
+  .contacto-formulario .form-select {
+    font-size: 16px;
+  }
+  .card-h__text {
+    font-size: 14px;
+  }
+  .card-h__body .etiqueta,
+  .etiqueta {
+    font-size: 13px;
+  }
+  .card-h .btn-turno {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 575px) {
+  .contenedor-especialidades {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+  .card-h,
+  .card-h--invertida {
     flex-direction: column;
+    border-radius: 20px;
+    margin-bottom: 24px;
   }
   .card-h__img {
     flex: none;
-    height: 200px;
+    max-width: none;
+    height: clamp(200px, 62vw, 280px);
+  }
+  .card-h__body {
+    align-items: flex-start;
+    text-align: left;
+    padding: 14px 22px 22px;
+  }
+  .card-h__body .etiqueta {
+    font-size: 12px;
+    padding: 3px 16px;
+    margin-bottom: 8px;
+  }
+  .card-h__title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+  .card-h__text {
+    font-size: 14px;
+    line-height: 1.45;
+    color: #222;
+    margin-bottom: 14px;
+  }
+  .card-h .btn-turno {
+    padding: 7px 22px;
+    border-radius: 14px;
+    font-size: 13px;
   }
 }
-.grupo-chico {
-  max-width: 1000px;   
-  margin: 0 auto;    
+
+@media (max-width: 767px) {
+  #carruselEspecialidades .card {
+    min-height: 500px;
+  }
+  #carruselEspecialidades .card-img-top {
+    height: 240px;
+  }
+  #carruselEspecialidades .card-title {
+    font-size: 24px;
+  }
+  #carruselEspecialidades .carousel-control-prev-icon,
+  #carruselEspecialidades .carousel-control-next-icon {
+    width: 28px;
+    height: 28px;
+  }
+  .especialista-foto {
+    height: 300px;
+  }
 }
 
-.grupo-chico .card-img-top {
-  height: 270px;      
-  object-fit: cover;  
+.fondo-rombo {
+  --rombo-extra: 30%;
 }
-.info-redes {
-  margin-top: 40px;
-  text-align: left;
+.fondo-rombo::before {
+  clip-path: polygon(
+    50% 0,
+    calc(100% + var(--rombo-extra)) 50%,
+    50% 100%,
+    calc(-1 * var(--rombo-extra)) 50%
+  );
 }
-
-.lista-contacto {
-  margin: 0;
-  padding: 0;
-}
-
-.lista-contacto li {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 12px;
-  color: #12294a;
-  font-size: var(--body-size);
+@media (max-width: 767px) {
+  .fondo-rombo {
+    --rombo-extra: 90%;
+  }
 }
 
-.lista-contacto i {
-  color: #C8A96B;
-  font-size: 20px;
-}
-.card-equipo .card-img-top {
-  height: 270px;
-  object-fit: cover;
-  object-position: top;
-}
+@media (max-width: 767px) {
+  #carruselEspecialidades {
+    padding: 0 clamp(44px, 15.5vw, 68px);
+  }
+  #carruselEspecialidades .card {
+    min-height: 480px;
+  }
+  #carruselEspecialidades .card-img-top {
+    height: auto;
+    aspect-ratio: 9 / 8;
+  }
+  #carruselEspecialidades .card-body {
+    padding: 14px 20px 22px;
+  }
+  #carruselEspecialidades .card-title {
+    font-size: 22px;
+  }
+  #carruselEspecialidades .card-text {
+    text-align: left !important;
+    font-size: 15px;
+  }
+  #carruselEspecialidades .btn-primary {
+    align-self: center;
+    min-width: 190px;
+    padding: 10px 16px;
+  }
+  #carruselEspecialidades .carousel-control-prev { left: 14px; }
+  #carruselEspecialidades .carousel-control-next { right: 14px; }
 
-.card-equipo .card-title {
-  color: #12294a;
-  font-size: var(--subheader-size);
-  font-weight: var(--subheader-weight);
-}
-
-.card-equipo .card-text {
-  color: #5B6B7A;
-  font-size: var(--body-size);
-  margin-bottom: 16px;
-}
-
-.card-equipo .etiqueta {
-  display: inline-block;
-  background: #102A43;   
-  color: #faf9f9;
-}
-.card-h .btn-turno {
-  background-color: #C8A96B;  
-  color: #102A43;               
-}
-
-.card-h .btn-turno:hover {
-  background-color: #C8A96B; 
-  color: #102A43;
+  .especialistas-grid {
+    padding: 0 clamp(36px, 13.5vw, 60px);
+  }
+  .especialista-foto {
+    height: 280px;
+  }
 }
