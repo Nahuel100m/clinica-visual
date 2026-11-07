@@ -19,7 +19,7 @@ body {
   flex-direction: column;
 }
 
-/* ===== NAVBAR ===== */
+
 .navbar {
   background: #102A43;
 }
@@ -41,7 +41,7 @@ body {
   color: #C8A96B;
 }
 
-/* ===== CARRUSEL PRINCIPAL (BANNER) ===== */
+
 #carouselExampleCaptions .carousel-item::after {
   content: "";
   position: absolute;
@@ -69,7 +69,7 @@ body {
   margin-bottom: 1.2rem;
 }
 
-/* ===== FONDO ROMBO (Especialidades + Especialistas) ===== */
+
 .fondo-rombo {
   position: relative;
   overflow: hidden;
@@ -95,16 +95,16 @@ body {
   margin-bottom: 0;
 }
 
-/* Título simple, sin píldora */
+
 .titulo-seccion {
   margin: 0 0 40px;
   text-align: center;
   font-size: var(--title-size);
   font-weight: var(--title-weight);
-  color: #12294a;
+  color: #102A43;
 }
 
-/* ===== CARRUSEL DE ESPECIALIDADES ===== */
+
 #carruselEspecialidades {
   padding: 0 60px;
 }
@@ -119,7 +119,6 @@ body {
   transform: translateY(-6px);
   box-shadow: 0 12px 28px rgba(16, 42, 67, 0.2) !important;
 }
-/* Ancho del conjunto y separación entre las 2 tarjetas */
 #carruselEspecialidades .container {
   max-width: 1258px;
 }
@@ -157,7 +156,6 @@ body {
   font-size: 16px;
 }
 
-/* Flechas: círculos negros chicos */
 #carruselEspecialidades .carousel-control-prev,
 #carruselEspecialidades .carousel-control-next {
   width: 40px;
@@ -173,12 +171,11 @@ body {
   background-size: 50%;
 }
 
-/* ===== ESPECIALISTAS ===== */
 .especialistas {
   margin-bottom: 40px;
 }
 .especialistas-titulo {
-  background: #12294a;
+  background: #102A43;
   color: #fff;
   width: 90%;
   max-width: 1016px;
@@ -191,7 +188,7 @@ body {
   font-weight: var(--headline-weight);
 }
 .especialistas-titulo span {
-  color: #c9a961;
+  color: #C8A96B;
   font-size: var(--headline-size);
 }
 .especialistas-grid {
@@ -230,7 +227,7 @@ body {
   text-align: center;
   font-size: 20px;
   font-weight: 400;
-  color: #12294a;
+  color: #102A43;
 }
 .especialista-especialidad {
   margin: 0;
@@ -257,7 +254,7 @@ body {
   padding-top: 16px;
 }
 .etiqueta {
-  background: #12294a;
+  background: #102A43;
   color: #fff;
   border-radius: 999px;
   padding: 3px 12px;
@@ -269,7 +266,6 @@ body {
   margin-right: 3px;
 }
 
-/* ===== BOTONES: fondo dorado, letras azules; al pasar el mouse, letras blancas ===== */
 .btn-turno {
   margin-top: 1rem;
   padding: 0.7rem 1.8rem;
@@ -288,12 +284,11 @@ body {
 .btn-turno:hover,
 .btn-primary:hover,
 .btn-contacto:hover {
-  background-color: #b38f4b !important;
-  border-color: #b38f4b !important;
+  background-color: #7d6428 !important;
+  border-color: #7d6428 !important;
   color: #fff !important;
 }
 
-/* ===== FOOTER ===== */
 .footer {
   margin-top: auto;
   background: #102A43;
@@ -339,13 +334,12 @@ body {
   opacity: 0.9;
 }
 
-/* ===== FOOTER NUEVO (fila horizontal) ===== */
 .footer-contenido {
   width: 100%;
   max-width: none;
   margin: 0;
   box-sizing: border-box;
-  height: 252px;              /* alto total del footer */
+  height: 252px;              
   padding: 0 5vw;
   display: flex;
   align-items: center;
@@ -362,7 +356,7 @@ body {
   text-align: left;
   border-left: 2px solid #8f7d52;
   padding: 0 0 0 18px;
-  height: 93px;               /* misma altura de línea en los 3 bloques */
+  height: 93px;               
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -417,7 +411,6 @@ body {
   }
 }
 
-/* ===== FOOTER: versión celular (hasta 767px) ===== */
 @media (max-width: 767px) {
   .footer-contenido {
     display: grid;
@@ -436,7 +429,6 @@ body {
     height: 80px;
   }
 
-  /* Horarios: al lado del logo, con línea dorada */
   .footer .footer-horarios {
     border-left: 2px solid #8f7d52;
     padding: 0 0 0 16px;
@@ -463,7 +455,6 @@ body {
     display: none;
   }
 
-  /* Redes: una sola fila */
   .footer .footer-social {
     grid-column: 1 / -1;
     flex-direction: row;
@@ -480,7 +471,6 @@ body {
     white-space: nowrap;
   }
 
-  /* Ubicación: franja dorada de lado a lado */
   .footer .footer-ubicacion {
     grid-column: 1 / -1;
     margin: 0 -20px;
@@ -498,12 +488,12 @@ body {
     margin: 0;
     font-size: 18px;
     font-weight: 700;
-    color: #12294a;
+    color: #102A43;
   }
   .footer .footer-ubicacion p.footer-direccion {
     margin: 0;
     font-size: 13px;
-    color: #12294a;
+    color: #102A43;
   }
 
   /* Mapa: ancho completo */
@@ -515,7 +505,6 @@ body {
   }
 }
 
-/* ===== PÁGINA ESPECIALIDADES: lista de tarjetas horizontales ===== */
 .fondo-rombo--pagina {
   padding-top: 60px;
   margin-bottom: 0;
@@ -532,11 +521,12 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   margin-bottom: 24px;
   text-align: left;
+  min-height: 270px;
 }
 .card-h:last-child {
   margin-bottom: 0;
 }
-/* Cataratas, Ojos secos y Astigmatismo: imagen a la derecha */
+
 .card-h--invertida {
   flex-direction: row-reverse;
 }
@@ -567,7 +557,7 @@ body {
   margin: 0 0 6px;
   font-size: 22px;
   font-weight: 700;
-  color: #12294a;
+  color: #102A43;
 }
 .card-h__text {
   margin: 0 0 12px;
@@ -590,6 +580,7 @@ body {
   .card-h,
   .card-h--invertida {
     flex-direction: column;
+    min-height: auto;
   }
   .card-h__img {
     flex: none;
@@ -601,7 +592,6 @@ body {
   }
 }
 
-/* ===== PÁGINA NUESTRO EQUIPO ===== */
 .contenedor-equipo {
   margin-bottom: 60px;
 }
@@ -630,7 +620,7 @@ body {
   margin: 0 0 6px;
   font-size: 20px;
   font-weight: 400;
-  color: #12294a;
+  color: #102A43;
 }
 .card-equipo .card-text {
   margin-bottom: 14px;
@@ -642,7 +632,6 @@ body {
   margin-top: auto;
 }
 
-/* ===== CONTACTO ===== */
 .contacto-seccion {
   padding: 60px 0;
   background: #e8ecef;
@@ -657,7 +646,7 @@ body {
   padding: 40px;
 }
 .contacto-formulario h2 {
-  color: #12294a;
+  color: #102A43;
   font-size: var(--title-size);
   font-weight: var(--title-weight);
   margin-bottom: 12px;
@@ -669,7 +658,7 @@ body {
   margin-bottom: 25px;
 }
 .contacto-formulario .form-label {
-  color: #12294a;
+  color: #102A43;
   font-size: var(--body-size);
   font-weight: 600;
 }
@@ -698,7 +687,6 @@ body {
   display: block;
 }
 
-/* ===== CONTACTO: ajustes de diseño ===== */
 .contacto-seccion.fondo-rombo {
   padding: 80px 0;
   margin-bottom: 0;
@@ -760,7 +748,6 @@ body {
   font-size: 20px;
 }
 
-/* ===== RESPONSIVE ===== */
 @media (max-width: 991px) {
   .contacto-formulario {
     padding: 25px;
@@ -848,7 +835,6 @@ body {
     overflow-x: hidden;
   }
 
-  /* Navbar */
   .navbar-brand img {
     height: 52px;
   }
@@ -858,13 +844,11 @@ body {
     text-align: center;
   }
 
-  /* Secciones con fondo rombo */
   .fondo-rombo--pagina {
     padding-top: 36px;
     padding-bottom: 48px;
   }
 
-  /* Inicio: especialistas */
   .especialistas-grid {
     grid-template-columns: minmax(0, 1fr);
     gap: 24px;
@@ -885,7 +869,6 @@ body {
     font-size: 14px;
   }
 
-  /* Nuestro Equipo */
   .contenedor-equipo {
     margin-bottom: 36px;
     padding-left: 20px;
@@ -895,7 +878,6 @@ body {
     height: 300px;
   }
 
-  /* Especialidades (lista) */
   .contenedor-especialidades {
     padding-left: 20px;
     padding-right: 20px;
@@ -943,7 +925,6 @@ body {
     max-height: 300px;
   }
 
-  /* Footer: que las redes no se salgan en pantallas angostas */
   .footer .footer-social {
     flex-wrap: wrap;
   }
@@ -978,6 +959,7 @@ img {
   .card-h,
   .card-h--invertida {
     flex-direction: column;
+    min-height: auto;
     border-radius: 20px;
     margin-bottom: 24px;
   }
@@ -1033,7 +1015,6 @@ img {
     height: 300px;
   }
 }
-
 .fondo-rombo {
   --rombo-extra: 30%;
 }
@@ -1050,7 +1031,6 @@ img {
     --rombo-extra: 90%;
   }
 }
-
 @media (max-width: 767px) {
   #carruselEspecialidades {
     padding: 0 clamp(44px, 15.5vw, 68px);
